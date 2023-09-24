@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <title>To Do List</title>
   </head>
   <body>
     <header>
+      <h1>Lista de Tarefas</h1>
       <% if (task == null) { %>
       <form action="/create" method="post">
         <input
@@ -30,9 +35,13 @@
       <ul>
         <% tasksList.forEach((task) => { %>
         <li>
-          <%= task.task %> | <%= task.date.toLocaleDateString('pt-br') %>
-          <a href="/getById/<%= task._id %>/update">Editar</a>
-          <a href="/getById/<%= task._id %>/delete">Apagar</a>
+          <%= task.task %> <%= %>
+          <a href="/getById/<%= task._id %>/update"
+            ><i class="bi bi-pencil"></i>
+          </a>
+          <a href="/getById/<%= task._id %>/delete"
+            ><i class="bi bi-trash3"></i
+          ></a>
         </li>
         <% }) %>
       </ul>
@@ -41,15 +50,19 @@
     <% if (taskDelete != null) { %>
     <section id="modal">
       <div id="card">
-        <a href="/">x</a>
-        <h2>Confirmação</h2>
+        <div id="head">
+          <a id="close" href="/"><i class="bi bi-x-lg"></i> </a>
+          <h2>Confirmação</h2>
+        </div>
         <hr />
         <p>Deseja realmente excluir a tarefa: <%= taskDelete.task %>?</p>
-        <a href="/">Não</a>
-        <a href="/deleteOne/<%= taskDelete._id %>">Sim</a>
+        <div id="btns">
+          <a id="btnNot" href="/">Não</a>
+          <a id="btnYes" href="/deleteOne/<%= taskDelete._id %>">Sim</a>
+        </div>
       </div>
     </section>
-<% } %>
+    <% } %>
 
     <script src="script.js"></script>
   </body>
