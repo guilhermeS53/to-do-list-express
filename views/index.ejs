@@ -34,15 +34,15 @@
     <section id="tasks">
       <ul>
         <% tasksList.forEach((task) => { %>
-          <li class="check-<%= task.check %>">
-            <%= task.task %>
-            <a class="check-<%= task.check %>" href="/getById/<%= task._id %>/update">
-              <i class="bi bi-pencil"></i>
-            </a>
-            <a href="/getById/<%= task._id %>/delete">
-              <i class="bi bi-trash3"></i>
-            </a>
-          </li>
+        <li>
+          <%= task.task %> <%= %>
+          <a href="/getById/<%= task._id %>/update"
+            ><i class="bi bi-pencil"></i>
+          </a>
+          <a href="/getById/<%= task._id %>/delete"
+            ><i class="bi bi-trash3"></i
+          ></a>
+        </li>
         <% }) %>
       </ul>
     </section>
