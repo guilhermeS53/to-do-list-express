@@ -7,7 +7,6 @@
     <title>To Do List</title>
   </head>
   <body>
-
     <form action="/create" method="post">
       <input
         type="text"
@@ -17,6 +16,12 @@
       />
       <button id="addButton" type="submit">Adicionar</button>
     </form>
+
+    <ul>
+      <% tasksList.forEach((task) => { %>
+      <li><%= task.task %> | <%= task.date.toLocaleDateString('pt-br') %></li>
+      <% }) %>
+    </ul>
 
     <script src="script.js"></script>
   </body>
