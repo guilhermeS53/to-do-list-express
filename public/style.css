@@ -235,16 +235,6 @@ div#btns a#btnYes:hover {
   justify-content: space-between;
 }
 
-.message-danger {
-  background-color: rgb(255, 197, 197);
-  color: #8a0000;
-}
-
-.message-success {
-  background-color: rgb(197, 255, 214);
-  color: #008a1e;
-}
-
 span#close-message {
   font-size: 2rem;
   cursor: pointer;
