@@ -34,9 +34,9 @@
     <section id="tasks">
       <ul>
         <% tasksList.forEach((task) => { %>
-        <li>
+        <li class="check-false">
           <%= task.task %> <%= %>
-          <a href="/getById/<%= task._id %>/update"
+          <a id="check-false" href="/getById/<%= task._id %>/update"
             ><i class="bi bi-pencil"></i>
           </a>
           <a href="/getById/<%= task._id %>/delete"
