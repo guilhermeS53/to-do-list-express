@@ -78,7 +78,7 @@ ul li {
 ul li a {
   text-decoration: none;
   color: #fff;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
 }
 
 ul li span {
@@ -256,7 +256,7 @@ ul li a.check-true::before {
   content: "";
   position: absolute;
   border: #fff solid;
-  top: 17px;
+  top: 12px;
   left: 16px;
   height: 15px;
   width: 7px;
@@ -268,7 +268,7 @@ ul li a.check-false::before {
   content: "";
   position: absolute;
   border: #fff solid;
-  top: 20px;
+  top: 16px;
   left: 16px;
   height: 13px;
   width: 13px;
